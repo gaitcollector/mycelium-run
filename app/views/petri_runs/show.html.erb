@@ -1,0 +1,89 @@
+<div class="card-header d-flex justify-content-between">
+  <div>
+    <h6 class='m-0'><b><%= @petri_run.strain %></b></h6>
+  </div>
+  <div>
+    <%= link_to 'Edit', edit_mycelium_petri_run_path(@petri_run.mycelium, @petri_run), class: 'btn btn-info btn-sm' %>
+    <%= link_to 'Back', mycelium_petri_runs_path(@petri_run.mycelium), class: 'btn btn-info btn-sm' %>
+  </div>
+</div>
+
+
+<ul class='list-group'>
+    <li class='list-group-item'>
+      <p><b>Mycelium:</b>
+        <%= @petri_run.mycelium.name %>
+      </p>
+    </li>
+
+    <li class='list-group-item'>
+      <p><b>Description:</b>
+        <%= @petri_run.description %>
+      </p>
+    </li>
+
+    <li class='list-group-item'>
+      <p><b>Recipe:</b>
+        <%= @petri_run.recipe %>
+      </p>
+    </li>
+
+    <li class='list-group-item'>
+      <div class="d-flex justify-content-between">
+        <p><b>Inoculated:</b>
+          <%= @petri_run.inoculated %>
+            <%= link_to '#', class: 'btn btn-info' do %>
+            <i class='fa fa-check'></i>
+          <% end %>
+        </p>
+      </div>
+    </li>
+
+    <li class='list-group-item'>
+      <p><b>Inoculated at:</b>
+        <%= @petri_run.inoculated_at %>
+      </p>
+    </li>
+
+    <li class='list-group-item '>
+      <div class="d-flex justify-content-between">
+        <p><b>Run started:</b>
+          <%= @petri_run.run_started %>
+            <%= link_to '#', class: 'btn btn-info' do %>
+            <i class='fa fa-check'></i>
+          <% end %>
+        </p>
+      </div>
+    </li>
+
+    <li class='list-group-item'>
+      <p><b>Run started at:</b>
+        <%= @petri_run.run_started_at %>
+      </p>
+    </li>
+
+    <li class='list-group-item'>
+      <div class="d-flex justify-content-between">
+        <p><b>Fully colonised:</b>
+          <%= @petri_run.fully_colonised %>
+            <%= link_to '#', class: 'btn btn-info' do %>
+            <i class='fa fa-check'></i>
+          <% end %>
+        </p>
+      </div>
+    </li>
+
+    <li class='list-group-item'>
+      <p><b>Fully colonised at:</b>
+        <%= @petri_run.fully_colonised_at %>
+      </p>
+    </li>
+
+    <li class='list-group-item'>
+      <p><b>Logbook:</b>
+        <%= @petri_run.logbook %>
+      </p>
+    </li>
+</ul>
+
+

@@ -1,0 +1,47 @@
+
+<div class="card-header d-flex justify-content-between">
+  <span>
+  <%= @mycelium.name %>
+  </span><%= link_to 'Edit', edit_mycelium_path(@mycelium), class: 'btn btn-info btn-sm' %>
+  <%= link_to 'Back', mycelia_path, class: 'btn btn-info btn-sm' %>
+</div>
+
+
+  <ul class='list-group'>
+    <%=link_to 'Petri Runs', mycelium_petri_runs_path(@mycelium) %>
+    <%= link_to 'New Petri run', mycelium_petri_runs_path(@mycelium), class: 'btn btn-info btn-sm' %>
+    <% @mycelium.petri_runs.each do |petri_run| %>
+      <li class='list-group-item'>
+        <%= link_to petri_run.strain, [petri_run.mycelium, petri_run] %>
+      </li>
+    <% end %>
+  </ul>
+  <ul class='list-group'>
+      <%=link_to 'Liquid Culture Runs', mycelium_petri_runs_path(@mycelium) %>
+        <%= link_to 'New Liquid Culture run', mycelium_petri_runs_path(@mycelium), class: 'btn btn-info btn-sm' %>
+      <% @mycelium.petri_runs.each do |petri_run| %>
+        <li class='list-group-item'>
+          <%= link_to petri_run.strain, [petri_run.mycelium, petri_run] %>
+        </li>
+      <% end %>
+    </ul>
+  <ul class='list-group'>
+    <%=link_to 'Spawn Runs', mycelium_petri_runs_path(@mycelium) %>
+    <%= link_to 'New Spawn run', mycelium_petri_runs_path(@mycelium), class: 'btn btn-info btn-sm' %>
+    <% @mycelium.petri_runs.each do |petri_run| %>
+      <li class='list-group-item'>
+        <%= link_to petri_run.strain, [petri_run.mycelium, petri_run] %>
+      </li>
+    <% end %>
+  </ul>
+  <ul class='list-group'>
+    <%=link_to 'Substrate Runs', mycelium_petri_runs_path(@mycelium) %>
+    <%= link_to 'New Substrate run', mycelium_petri_runs_path(@mycelium), class: 'btn btn-info btn-sm' %>
+    <% @mycelium.petri_runs.each do |petri_run| %>
+      <li class='list-group-item'>
+        <%= link_to petri_run.strain, [petri_run.mycelium, petri_run] %>
+      </li>
+    <% end %>
+  </ul>
+
+

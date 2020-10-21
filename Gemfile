@@ -2,6 +2,16 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
+# My gems
+gem 'nested_scaffold'
+gem 'better_errors', '~> 2.8', '>= 2.8.3'
+gem 'bootstrap', '~> 4.5', '>= 4.5.2'
+gem 'jquery-rails'
+gem "font-awesome-rails"
+gem 'simple_form', '~> 5.0', '>= 5.0.3'
+
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'

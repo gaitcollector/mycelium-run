@@ -1,0 +1,15 @@
+<div class="card-header d-flex justify-content-between">
+  <span>
+  My Micelia
+  </span>
+  <%= link_to 'Add New Mycelium', new_mycelium_path, class: 'btn btn-info btn-sm' %>
+</div>
+
+
+  <ul class='list-group'>
+    <% @mycelia.each do |mycelium| %>
+      <li class='list-group-item'>
+        <%= link_to mycelium.name, mycelium %>
+      </li>
+    <% end %>
+  </ul>

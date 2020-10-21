@@ -1,0 +1,69 @@
+<%= form_for([@substrate_run.mycelium, @substrate_run]) do |f| %>
+  <% if @substrate_run.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@substrate_run.errors.count, "error") %> prohibited this substrate_run from being saved:</h2>
+
+      <ul>
+      <% @substrate_run.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :strain %><br />
+    <%= f.text_field :strain %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :inoculated %><br />
+    <%= f.check_box :inoculated %>
+  </div>
+  <div class="field">
+    <%= f.label :inoculated_at %><br />
+    <%= f.datetime_select :inoculated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :run_started %><br />
+    <%= f.check_box :run_started %>
+  </div>
+  <div class="field">
+    <%= f.label :run_started_at %><br />
+    <%= f.datetime_select :run_started_at %>
+  </div>
+  <div class="field">
+    <%= f.label :fully_colonised %><br />
+    <%= f.check_box :fully_colonised %>
+  </div>
+  <div class="field">
+    <%= f.label :fully_colonised_at %><br />
+    <%= f.datetime_select :fully_colonised_at %>
+  </div>
+  <div class="field">
+    <%= f.label :primodia_formed %><br />
+    <%= f.check_box :primodia_formed %>
+  </div>
+  <div class="field">
+    <%= f.label :primodia_formed_at %><br />
+    <%= f.datetime_select :primodia_formed_at %>
+  </div>
+  <div class="field">
+    <%= f.label :logbook %><br />
+    <%= f.text_area :logbook %>
+  </div>
+  <div class="field">
+    <%= f.label :recipe %><br />
+    <%= f.text_area :recipe %>
+  </div>
+  <div class="field">
+    <%= f.label :mycelium %><br />
+    <%= f.text_field :mycelium %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

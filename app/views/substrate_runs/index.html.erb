@@ -1,0 +1,47 @@
+<h1>Listing substrate_runs</h1>
+
+<table>
+  <tr>
+    <th>Strain</th>
+    <th>Description</th>
+    <th>Inoculated</th>
+    <th>Inoculated at</th>
+    <th>Run started</th>
+    <th>Run started at</th>
+    <th>Fully colonised</th>
+    <th>Fully colonised at</th>
+    <th>Primodia formed</th>
+    <th>Primodia formed at</th>
+    <th>Logbook</th>
+    <th>Recipe</th>
+    <th>Mycelium</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @substrate_runs.each do |substrate_run| %>
+  <tr>
+    <td><%= substrate_run.strain %></td>
+    <td><%= substrate_run.description %></td>
+    <td><%= substrate_run.inoculated %></td>
+    <td><%= substrate_run.inoculated_at %></td>
+    <td><%= substrate_run.run_started %></td>
+    <td><%= substrate_run.run_started_at %></td>
+    <td><%= substrate_run.fully_colonised %></td>
+    <td><%= substrate_run.fully_colonised_at %></td>
+    <td><%= substrate_run.primodia_formed %></td>
+    <td><%= substrate_run.primodia_formed_at %></td>
+    <td><%= substrate_run.logbook %></td>
+    <td><%= substrate_run.recipe %></td>
+    <td><%= substrate_run.mycelium %></td>
+    <td><%= link_to 'Show', [substrate_run.mycelium, substrate_run] %></td>
+    <td><%= link_to 'Edit', edit_mycelium_substrate_run_path(substrate_run.mycelium, substrate_run) %></td>
+    <td><%= link_to 'Destroy', [substrate_run.mycelium, substrate_run], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Substrate run', new_mycelium_substrate_run_path(params[:mycelium_id]) %>

@@ -1,0 +1,43 @@
+<h1>Listing lc_runs</h1>
+
+<table>
+  <tr>
+    <th>Strain</th>
+    <th>Description</th>
+    <th>Inoculated</th>
+    <th>Inoculated at</th>
+    <th>Run started</th>
+    <th>Run started at</th>
+    <th>Fully colonised</th>
+    <th>Fully colonised at</th>
+    <th>Logbook</th>
+    <th>Recipe</th>
+    <th>Mycelium</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lc_runs.each do |lc_run| %>
+  <tr>
+    <td><%= lc_run.strain %></td>
+    <td><%= lc_run.description %></td>
+    <td><%= lc_run.inoculated %></td>
+    <td><%= lc_run.inoculated_at %></td>
+    <td><%= lc_run.run_started %></td>
+    <td><%= lc_run.run_started_at %></td>
+    <td><%= lc_run.fully_colonised %></td>
+    <td><%= lc_run.fully_colonised_at %></td>
+    <td><%= lc_run.logbook %></td>
+    <td><%= lc_run.recipe %></td>
+    <td><%= lc_run.mycelium %></td>
+    <td><%= link_to 'Show', [lc_run.mycelium, lc_run] %></td>
+    <td><%= link_to 'Edit', edit_mycelium_lc_run_path(lc_run.mycelium, lc_run) %></td>
+    <td><%= link_to 'Destroy', [lc_run.mycelium, lc_run], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lc run', new_mycelium_lc_run_path(params[:mycelium_id]) %>

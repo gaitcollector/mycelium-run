@@ -1,0 +1,43 @@
+<h1>Listing spawn_runs</h1>
+
+<table>
+  <tr>
+    <th>Strain</th>
+    <th>Description</th>
+    <th>Inoculated</th>
+    <th>Inoculated at</th>
+    <th>Run started</th>
+    <th>Run started at</th>
+    <th>Fully colonised</th>
+    <th>Fully colonised at</th>
+    <th>Logbook</th>
+    <th>Recipe</th>
+    <th>Mycelium</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @spawn_runs.each do |spawn_run| %>
+  <tr>
+    <td><%= spawn_run.strain %></td>
+    <td><%= spawn_run.description %></td>
+    <td><%= spawn_run.inoculated %></td>
+    <td><%= spawn_run.inoculated_at %></td>
+    <td><%= spawn_run.run_started %></td>
+    <td><%= spawn_run.run_started_at %></td>
+    <td><%= spawn_run.fully_colonised %></td>
+    <td><%= spawn_run.fully_colonised_at %></td>
+    <td><%= spawn_run.logbook %></td>
+    <td><%= spawn_run.recipe %></td>
+    <td><%= spawn_run.mycelium %></td>
+    <td><%= link_to 'Show', [spawn_run.mycelium, spawn_run] %></td>
+    <td><%= link_to 'Edit', edit_mycelium_spawn_run_path(spawn_run.mycelium, spawn_run) %></td>
+    <td><%= link_to 'Destroy', [spawn_run.mycelium, spawn_run], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Spawn run', new_mycelium_spawn_run_path(params[:mycelium_id]) %>

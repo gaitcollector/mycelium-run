@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Strain:</b>
+  <%= @lc_run.strain %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @lc_run.description %>
+</p>
+
+<p>
+  <b>Inoculated:</b>
+  <%= @lc_run.inoculated %>
+</p>
+
+<p>
+  <b>Inoculated at:</b>
+  <%= @lc_run.inoculated_at %>
+</p>
+
+<p>
+  <b>Run started:</b>
+  <%= @lc_run.run_started %>
+</p>
+
+<p>
+  <b>Run started at:</b>
+  <%= @lc_run.run_started_at %>
+</p>
+
+<p>
+  <b>Fully colonised:</b>
+  <%= @lc_run.fully_colonised %>
+</p>
+
+<p>
+  <b>Fully colonised at:</b>
+  <%= @lc_run.fully_colonised_at %>
+</p>
+
+<p>
+  <b>Logbook:</b>
+  <%= @lc_run.logbook %>
+</p>
+
+<p>
+  <b>Recipe:</b>
+  <%= @lc_run.recipe %>
+</p>
+
+<p>
+  <b>Mycelium:</b>
+  <%= @lc_run.mycelium %>
+</p>
+
+
+<%= link_to 'Edit', edit_mycelium_lc_run_path(@lc_run.mycelium, @lc_run) %> |
+<%= link_to 'Back', mycelium_lc_runs_path(@lc_run.mycelium) %>

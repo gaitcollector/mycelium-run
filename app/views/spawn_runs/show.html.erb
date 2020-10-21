@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Strain:</b>
+  <%= @spawn_run.strain %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @spawn_run.description %>
+</p>
+
+<p>
+  <b>Inoculated:</b>
+  <%= @spawn_run.inoculated %>
+</p>
+
+<p>
+  <b>Inoculated at:</b>
+  <%= @spawn_run.inoculated_at %>
+</p>
+
+<p>
+  <b>Run started:</b>
+  <%= @spawn_run.run_started %>
+</p>
+
+<p>
+  <b>Run started at:</b>
+  <%= @spawn_run.run_started_at %>
+</p>
+
+<p>
+  <b>Fully colonised:</b>
+  <%= @spawn_run.fully_colonised %>
+</p>
+
+<p>
+  <b>Fully colonised at:</b>
+  <%= @spawn_run.fully_colonised_at %>
+</p>
+
+<p>
+  <b>Logbook:</b>
+  <%= @spawn_run.logbook %>
+</p>
+
+<p>
+  <b>Recipe:</b>
+  <%= @spawn_run.recipe %>
+</p>
+
+<p>
+  <b>Mycelium:</b>
+  <%= @spawn_run.mycelium %>
+</p>
+
+
+<%= link_to 'Edit', edit_mycelium_spawn_run_path(@spawn_run.mycelium, @spawn_run) %> |
+<%= link_to 'Back', mycelium_spawn_runs_path(@spawn_run.mycelium) %>

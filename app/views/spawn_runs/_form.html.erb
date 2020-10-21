@@ -1,0 +1,57 @@
+<%= form_for([@spawn_run.mycelium, @spawn_run]) do |f| %>
+  <% if @spawn_run.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@spawn_run.errors.count, "error") %> prohibited this spawn_run from being saved:</h2>
+
+      <ul>
+      <% @spawn_run.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :strain %><br />
+    <%= f.text_field :strain %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :recipe %><br />
+    <%= f.text_area :recipe %>
+  </div>
+  <div class="field">
+    <%= f.label :inoculated %><br />
+    <%= f.check_box :inoculated %>
+  </div>
+  <div class="field">
+    <%= f.label :inoculated_at %><br />
+    <%= f.datetime_select :inoculated_at %>
+  </div>
+  <div class="field">
+    <%= f.label :run_started %><br />
+    <%= f.check_box :run_started %>
+  </div>
+  <div class="field">
+    <%= f.label :run_started_at %><br />
+    <%= f.datetime_select :run_started_at %>
+  </div>
+  <div class="field">
+    <%= f.label :fully_colonised %><br />
+    <%= f.check_box :fully_colonised %>
+  </div>
+  <div class="field">
+    <%= f.label :fully_colonised_at %><br />
+    <%= f.datetime_select :fully_colonised_at %>
+  </div>
+  <div class="field">
+    <%= f.label :logbook %><br />
+    <%= f.text_area :logbook %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

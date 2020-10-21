@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Strain:</b>
+  <%= @substrate_run.strain %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @substrate_run.description %>
+</p>
+
+<p>
+  <b>Inoculated:</b>
+  <%= @substrate_run.inoculated %>
+</p>
+
+<p>
+  <b>Inoculated at:</b>
+  <%= @substrate_run.inoculated_at %>
+</p>
+
+<p>
+  <b>Run started:</b>
+  <%= @substrate_run.run_started %>
+</p>
+
+<p>
+  <b>Run started at:</b>
+  <%= @substrate_run.run_started_at %>
+</p>
+
+<p>
+  <b>Fully colonised:</b>
+  <%= @substrate_run.fully_colonised %>
+</p>
+
+<p>
+  <b>Fully colonised at:</b>
+  <%= @substrate_run.fully_colonised_at %>
+</p>
+
+<p>
+  <b>Primodia formed:</b>
+  <%= @substrate_run.primodia_formed %>
+</p>
+
+<p>
+  <b>Primodia formed at:</b>
+  <%= @substrate_run.primodia_formed_at %>
+</p>
+
+<p>
+  <b>Logbook:</b>
+  <%= @substrate_run.logbook %>
+</p>
+
+<p>
+  <b>Recipe:</b>
+  <%= @substrate_run.recipe %>
+</p>
+
+<p>
+  <b>Mycelium:</b>
+  <%= @substrate_run.mycelium %>
+</p>
+
+
+<%= link_to 'Edit', edit_mycelium_substrate_run_path(@substrate_run.mycelium, @substrate_run) %> |
+<%= link_to 'Back', mycelium_substrate_runs_path(@substrate_run.mycelium) %>
