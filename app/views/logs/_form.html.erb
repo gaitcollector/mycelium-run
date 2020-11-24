@@ -1,0 +1,5 @@
+<%= form_for [@loggable, LogEntry.new] do |log|%>
+  <div class="form-group">
+    <%= f.text_area :content, class: "form-control", placeholder: "Add a log entry" %>
+  </div>
+<% end %>

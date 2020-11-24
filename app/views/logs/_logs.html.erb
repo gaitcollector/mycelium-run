@@ -1,0 +1,7 @@
+<div >
+  <% loggable.log_entries.each do |log_entry| %>
+    <small class=" text-muted"><%= time_ago_in_words log_entry.created_at %> ago</small>
+    <small ><%= log_entry.content %></small>
+    <br>
+  <% end %>
+</div>

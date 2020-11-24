@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_21_020501) do
+ActiveRecord::Schema.define(version: 2020_10_28_055129) do
 
   create_table "lc_runs", force: :cascade do |t|
     t.string "strain"
@@ -27,6 +27,23 @@ ActiveRecord::Schema.define(version: 2020_10_21_020501) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["mycelium_id"], name: "index_lc_runs_on_mycelium_id"
+  end
+
+  create_table "log_entries", force: :cascade do |t|
+    t.text "content"
+    t.string "loggable_type", null: false
+    t.integer "loggable_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["loggable_type", "loggable_id"], name: "index_log_entries_on_loggable_type_and_loggable_id"
+  end
+
+  create_table "logs", force: :cascade do |t|
+    t.string "loggable_type"
+    t.integer "loggable_id"
+    t.text "body"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "mycelia", force: :cascade do |t|
